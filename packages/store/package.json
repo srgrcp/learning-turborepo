@@ -1,0 +1,16 @@
+{
+  "name": "store",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Sergio Carrillo",
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
+    "graphql-api": "*",
+    "react-redux": "^8.0.2"
+  },
+  "devDependencies": {
+    "tsconfig": "*",
+    "typescript": "^4.7.4"
+  }
+}

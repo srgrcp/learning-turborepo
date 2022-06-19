@@ -9,6 +9,9 @@
     },
     "dev": {
       "cache": false
+    },
+    "electron-app#dev": {
+      "dependsOn": ["electron-app#build"]
     }
   }
 }
