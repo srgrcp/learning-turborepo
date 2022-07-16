@@ -1,11 +1,11 @@
-import { getAllFruits, RootState, useAppDispatch } from "store";
-import { useSelector } from 'react-redux'
+import { getAllFruits, RootState, store } from "store";
+import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from "react";
 import { useCallback } from "react";
 
 export default function Web() {
   const { fruits, loading, error } = useSelector((state: RootState) => state.fruitList)
-  const dispatch = useAppDispatch();
+  const dispatch = useDispatch<typeof store.dispatch>();
 
   const fetchFruits = useCallback(
     () => {
@@ -21,9 +21,11 @@ export default function Web() {
   }, [fruits, loading, error])
 
   return (
-    <div>
-      <h1>Web</h1>
-      <button onClick={() => fetchFruits()}>Boop</button>
+    <div className="p-10">
+      <button
+        className="text-zinc-50 bg-violet-700 px-12 py-2 rounded-md shadow-xl hover:shadow-xl shadow-violet-700/20 hover:shadow-violet-700/30 hover:scale-105 transition"
+        onClick={() => fetchFruits()}
+      >Boop</button>
     </div>
   );
 }
